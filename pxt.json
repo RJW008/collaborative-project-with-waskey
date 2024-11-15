@@ -2,7 +2,8 @@
     "name": "Collaborative Project with Waskey",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "extension": "pub:84994-61957-66350-13939"
     },
     "files": [
         "main.blocks",
