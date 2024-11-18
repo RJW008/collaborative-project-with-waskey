@@ -1,4 +1,4 @@
-function RichGetHouse (bool: boolean) {
+function doSomething (bool: boolean) {
     if (bool) {
         game.splash("You are absurdly wealthy!" + " " + "Take this house!")
         return sprites.create(img`
@@ -87,4 +87,4 @@ if (Affordable_Mortgage < 500) {
 } else {
     game.splash("You can afford a monthly mortgage of " + "$" + Affordable_Mortgage)
 }
-RichGetHouse(Affordable_Mortgage > 10000)
+doSomething(Affordable_Mortgage > 5000)
