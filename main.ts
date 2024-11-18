@@ -2,6 +2,8 @@ let TotalMonthlyIncome = 0
 let Number_of_Workers = 0
 let Monthly_Income = 0
 let Affordable_Mortgage = 0
+/**
+ */
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     TotalMonthlyIncome = 0
     Number_of_Workers = game.askForNumber("How many people in your family work?")
