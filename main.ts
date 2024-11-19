@@ -102,7 +102,7 @@ function RichGetsHouse (bool: boolean) {
  * Makes one variable another variable divided by 4.
  */
 /**
- * If then statement if one variable doesn’t exceed 500 then it splashes something and if it does it calls something else
+ * If then statement if one variable doesn't exceed 500 then it splashes something and if it does it calls something else
  */
 /**
  * Calls a function if a variable exceeds 5000
