@@ -2,26 +2,11 @@ let TotalMonthlyIncome = 0
 let Number_of_Workers = 0
 let Monthly_Income = 0
 let Affordable_Mortgage = 0
-/**
- */
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    TotalMonthlyIncome = 0
-    Number_of_Workers = game.askForNumber("How many people in your family work?")
-    while (Number_of_Workers > 0) {
-        Monthly_Income = game.askForNumber("How much does this person make")
-        Number_of_Workers += -1
-        TotalMonthlyIncome += Monthly_Income
-    }
-    Affordable_Mortgage = TotalMonthlyIncome / 4
-    if (Affordable_Mortgage < 500) {
-        game.splash("Try Renting!" + "You are not in a position to buy a house!")
-    } else {
-        game.splash("You can afford a monthly mortgage of " + "$" + Affordable_Mortgage)
-    }
-    doSomething(Affordable_Mortgage > 5000)
-})
-function doSomething (bool: boolean) {
+// function with parameter
+function RichGetHouse (bool: boolean) {
+    // conditional that relies on a boolean
     if (bool) {
+        // splashes text and returns an image
         game.splash("You are absurdly wealthy!" + " " + "Take this house!")
         return sprites.create(img`
             ....................e2e22e2e....................
@@ -95,3 +80,28 @@ function doSomething (bool: boolean) {
             `, SpriteKind.Player)
     }
 }
+// When the A button is pressed the main code runs.
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    // Sets a variable to 0
+    TotalMonthlyIncome = 0
+    // Asks for an integer for the variable.
+    Number_of_Workers = game.askForNumber("How many people in your family work?")
+    // Runs a loop while a variable is more than 0
+    while (Number_of_Workers > 0) {
+        Monthly_Income = game.askForNumber("How much does this person make")
+        // Subtracts 1 from the variable that controls the loop
+        Number_of_Workers += -1
+        // Adds an integer that was input to a variable
+        TotalMonthlyIncome += Monthly_Income
+    }
+    // Sets a variable to another variable divided by 4
+    Affordable_Mortgage = TotalMonthlyIncome / 4
+    // Conditional that splashes text through both paths.
+    if (Affordable_Mortgage < 500) {
+        game.splash("Try Renting!" + "You are not in a position to buy a house!")
+    } else {
+        game.splash("You can afford a monthly mortgage of " + "$" + Affordable_Mortgage)
+    }
+    // calls the fucntion
+    RichGetHouse(Affordable_Mortgage > 5000)
+})
