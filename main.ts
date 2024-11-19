@@ -74,7 +74,7 @@ function doSomething (bool: boolean) {
             ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
             `, SpriteKind.Player)
     } else {
-        game.splash("You aren't that rich." + " " + "Take this snowball while you think about what kind of house to buy.")
+        game.splash("You aren't that rich. " + " " + "Take this snowball while you think about what kind of house to buy.")
         return sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . 1 . . . . . . . . . . 
