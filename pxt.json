@@ -3,7 +3,7 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "extension": "pub:84994-61957-66350-13939"
+        "extension #2": "pub:25762-69275-71592-19921"
     },
     "files": [
         "main.blocks",
